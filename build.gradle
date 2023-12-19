@@ -29,8 +29,9 @@ repositories {
         allowInsecureProtocol = true
     }
     mavenCentral()
+    jcenter()
+	gradlePluginPortal()
 }
-
 
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
