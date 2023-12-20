@@ -9,6 +9,8 @@ version = '0.0.1-SNAPSHOT'
 apply plugin: 'application'
 apply plugin: 'java'
 
+mainClassName = 'com.igortest.printrequest.PrintRequestApplication'
+
 java {
 	sourceCompatibility = '17'
 }
@@ -48,5 +50,8 @@ tasks.named('test') {
 jar {
     archiveBaseName = 'print-request'
     archiveVersion =  '1.0.0'
-    mainClassName = 'com.igortest.printrequest.PrintRequestApplication'
+
+}
+plugins {
+  id 'com.coditory.manifest' version '0.2.6'
 }
