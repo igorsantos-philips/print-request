@@ -5,7 +5,7 @@ plugins {
 }
 
 group = 'com.igortest'
-version = '0.0.1-SNAPSHOT'
+version = '1.0.0'
 apply plugin: 'application'
 apply plugin: 'java'
 
@@ -46,7 +46,10 @@ tasks.named('test') {
 	useJUnitPlatform()
 }
 jar {
-    archiveBaseName = 'print-request'
-    archiveVersion =  '1.0.0'
-    mainClassName = 'com.igortest.printrequest.PrintRequestApplication'
+    manifest {
+        attributes 'Implementation-Title': 'print-request',
+                   'Implementation-Version': version,
+                   'Main-Class': 'com.igortest.printrequest.PrintRequestApplication',
+                   'Built-JDK': '17.0' 
+    }
 }
