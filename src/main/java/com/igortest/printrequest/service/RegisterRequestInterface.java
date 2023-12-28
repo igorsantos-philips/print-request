@@ -1,8 +1,7 @@
 package com.igortest.printrequest.service;
 
-import org.springframework.http.HttpHeaders;
-import org.springframework.http.HttpMethod;
+import org.json.JSONObject;
 
 public interface RegisterRequestInterface {
-    public void register(HttpMethod httpMethod, String requestBody, HttpHeaders headers, String queryParams);
+    public void register(JSONObject request);
 }
